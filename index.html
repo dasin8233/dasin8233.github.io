@@ -76,4 +76,728 @@
   .btn-pink{background:var(--pink-deep);color:#fff;box-shadow:0 6px 16px rgba(217,138,155,.30);}
   .btn-ghost{background:#fff;color:var(--blue-deep);border-color:var(--blue-soft);}
   .btn-sm{padding:8px 16px;font-size:14px;}
-  @media (max-width:860px){ nav.links{display:
+  @media (max-width:860px){ nav.links{display:none;} }
+
+  /* Hero */
+  .hero{
+    position:relative; padding:64px 24px 90px; overflow:hidden;
+    background:
+      radial-gradient(700px 420px at 88% -8%, var(--pink-soft) 0%, rgba(246,210,217,0) 65%),
+      radial-gradient(760px 480px at 8% 105%, var(--blue-pale) 0%, rgba(234,243,247,0) 60%);
+  }
+  .hero-grid{
+    max-width:1120px;margin:0 auto;
+    display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--line-c);
+    padding:7px 16px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--blue-deep);
+    margin-bottom:22px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--pink-deep);}
+  .hero h1{
+    font-size:clamp(32px, 4.6vw, 52px);
+    line-height:1.35; font-weight:900; margin:0 0 22px;
+    color:#233238;
+  }
+  .hero h1 .accent{color:var(--blue-deep);}
+  .hero p.lede{font-size:18px;color:var(--ink-muted);max-width:520px;margin:0 0 34px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;}
+  .hero-stats{display:flex;gap:30px;margin-top:44px;flex-wrap:wrap;}
+  .stat b{display:block;font-size:26px;font-family:'Noto Serif TC',serif;color:var(--blue-deep);}
+  .stat span{font-size:13.5px;color:var(--ink-muted);}
+
+  /* Signature: integrated care flower diagram */
+  .flower-wrap{position:relative; display:flex;align-items:center;justify-content:center; min-height:380px;}
+  .flower{width:100%;max-width:420px;}
+  .petal-label{
+    font-family:'Noto Sans TC',sans-serif; font-size:12.5px; font-weight:700; fill:var(--ink);
+  }
+  .petal-sub{font-size:10.5px; fill:var(--ink-muted); font-weight:500;}
+
+  section{padding:88px 0;}
+  .section-head{max-width:640px;margin:0 auto 52px;text-align:center;}
+  .section-head .eyebrow{margin-bottom:18px;}
+  .section-head h2{font-size:clamp(26px,3.2vw,36px);margin:0 0 14px;font-weight:800;}
+  .section-head p{color:var(--ink-muted);font-size:16.5px;margin:0;}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr 1fr;}}
+  .value-card{
+    background:#fff;border:1px solid var(--line-c);border-radius:var(--radius-md);
+    padding:26px 20px;text-align:center;
+  }
+  .value-card .ic{
+    width:52px;height:52px;border-radius:50%;margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;font-size:22px;
+    background:var(--blue-pale);
+  }
+  .value-card h3{font-size:16px;margin:0 0 6px;}
+  .value-card p{font-size:13.5px;color:var(--ink-muted);margin:0;}
+
+  /* Services */
+  .svc-tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;}
+  .svc-tab{
+    padding:10px 20px;border-radius:999px;border:2px solid var(--line-c);
+    background:#fff;font-weight:700;font-size:14.5px;color:var(--ink-muted);cursor:pointer;
+  }
+  .svc-tab.active{background:var(--blue-deep);color:#fff;border-color:var(--blue-deep);}
+  .svc-panel{display:none;}
+  .svc-panel.active{display:block;}
+  .svc-provider-note{
+    text-align:center;font-size:13.5px;color:var(--blue-deep);font-weight:700;
+    background:var(--blue-pale);display:inline-block;padding:8px 20px;border-radius:999px;
+    margin:0 auto 28px;position:relative;left:50%;transform:translateX(-50%);
+  }
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media (max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:600px){.svc-grid{grid-template-columns:1fr;}}
+  .svc-card{
+    background:#fff;border:1px solid var(--line-c);border-radius:var(--radius-md);
+    padding:24px; transition:box-shadow .18s ease, transform .18s ease;
+  }
+  .svc-card:hover{box-shadow:0 14px 30px rgba(46,58,63,.08); transform:translateY(-3px);}
+  .svc-card .tag{
+    display:inline-block;font-size:12px;font-weight:700;color:var(--pink-deep);
+    background:var(--pink-soft);padding:4px 10px;border-radius:999px;margin-bottom:12px;
+  }
+  .svc-card h3{font-size:17.5px;margin:0 0 8px;}
+  .svc-card p{font-size:14px;color:var(--ink-muted);margin:0;}
+
+  /* Fee table */
+  .fee-table-wrap{margin-top:44px;background:#fff;border:1px solid var(--line-c);border-radius:var(--radius-md);padding:28px;}
+  .fee-title{font-size:18px;margin:0 0 10px;}
+  .fee-note{font-size:13.5px;color:var(--ink-muted);margin:0 0 20px;}
+  .fee-table-scroll{overflow-x:auto;}
+  .fee-table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px;}
+  .fee-table th{
+    background:var(--blue-pale);color:var(--blue-deep);font-weight:700;
+    text-align:left;padding:10px 12px;white-space:nowrap;
+  }
+  .fee-table td{padding:10px 12px;border-bottom:1px solid var(--line-c);color:var(--ink);}
+  .fee-table tbody tr:hover{background:var(--cream);}
+  .fee-table td:first-child{font-weight:700;color:var(--blue-deep);}
+  .fee-disclaimer{font-size:12.5px;color:var(--ink-muted);margin:18px 0 0;padding-top:16px;border-top:1px dashed var(--line-c);}
+  .respite-detail{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px;}
+  @media (max-width:700px){.respite-detail{grid-template-columns:1fr;}}
+  .respite-card{background:var(--cream);border:1px solid var(--line-c);border-radius:var(--radius-sm);padding:20px;}
+  .respite-card h4{margin:0 0 10px;font-size:16px;color:var(--blue-deep);}
+  .respite-card p{font-size:14px;color:var(--ink);margin:0 0 12px;}
+  .respite-who{font-size:13.5px;color:var(--ink-muted) !important;}
+
+  /* Service tree diagram */
+  .service-tree{
+    padding:20px 8px 8px; overflow-x:auto;
+  }
+  .service-tree svg{width:100%; min-width:640px; height:auto; display:block; margin:0 auto;}
+
+  /* Process */
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:step;}
+  @media (max-width:900px){.steps{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.steps{grid-template-columns:1fr;}}
+  .step{
+    background:var(--blue-pale); border-radius:var(--radius-md); padding:24px 18px;text-align:center;position:relative;
+  }
+  .step .num{
+    width:34px;height:34px;border-radius:50%;background:var(--blue-deep);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;margin:0 auto 12px;font-size:15px;
+  }
+  .step h4{font-size:15px;margin:0 0 6px;}
+  .step p{font-size:13px;color:var(--ink-muted);margin:0;}
+
+  /* Testimonials */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media (max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-card{
+    background:#fff;border-radius:var(--radius-md);padding:26px;border:1px solid var(--line-c);
+  }
+  .testi-card p{font-size:14.5px;color:var(--ink);margin:0 0 16px;}
+  .testi-who{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-muted);font-weight:700;}
+  .testi-who .av{width:36px;height:36px;border-radius:50%;background:var(--pink-soft);}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--line-c);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;padding:20px 4px;
+    font-size:16px;font-weight:700;color:var(--ink);display:flex;justify-content:space-between;align-items:center;
+    cursor:pointer;font-family:inherit;
+  }
+  .faq-q .plus{font-size:20px;color:var(--blue-deep);transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;font-size:14.5px;color:var(--ink-muted);}
+  .faq-a p{margin:0 0 18px;padding:0 4px;}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{
+    background:#fff;border:1px solid var(--line-c);border-radius:var(--radius-lg);padding:36px;
+  }
+  .contact-row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line-c);}
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .ic{
+    width:42px;height:42px;border-radius:50%;background:var(--blue-pale);
+    display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;
+  }
+  .contact-row b{display:block;font-size:14px;}
+  .contact-row span{font-size:13.5px;color:var(--ink-muted);}
+  .map-wrap{display:flex;flex-direction:column;gap:12px;}
+  .map-tabs{display:flex;gap:8px;}
+  .map-tab{
+    flex:1;padding:11px 14px;border-radius:var(--radius-sm);border:2px solid var(--line-c);
+    background:#fff;font-weight:700;font-size:13.5px;color:var(--ink-muted);cursor:pointer;
+  }
+  .map-tab.active{background:var(--blue-deep);color:#fff;border-color:var(--blue-deep);}
+  .map-box{
+    border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--line-c);
+    aspect-ratio:4/3; display:none;
+  }
+  .map-box.active{display:block;}
+  .map-box iframe{width:100%;height:100%;display:block;}
+
+  footer{background:#233238;color:#CBD5D8;padding:56px 0 26px;font-size:14px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px;}
+  @media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  footer h4{color:#fff;font-size:14px;margin:0 0 14px;}
+  footer a{color:#AAB8BC;}
+  footer a:hover{color:#fff;}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;}
+  .foot-bottom{border-top:1px solid #3A484D;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#8B9A9E;}
+
+  /* Floating action buttons */
+  .fab-group{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:12px;z-index:60;}
+  .fab{
+    width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-size:24px;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.18);
+  }
+  .fab-line{background:#06C755;}
+  .fab-phone{background:var(--pink-deep);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="brand-mark">心</span>
+      大心居家整合照護團隊
+    </div>
+    <nav class="links">
+      <a href="#about">關於我們</a>
+      <a href="#services">服務項目</a>
+      <a href="#process">申請流程</a>
+      <a href="#faq">常見問題</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:0286726009" class="btn btn-primary btn-sm">📞 立即來電</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>居家護理．長照 3.0．個案管理．社區照顧</div>
+      <h1>讓專業照護<br><span class="accent">走進每一個家庭</span></h1>
+      <p class="lede">提供居家護理、長照服務、個案管理、巷弄長照站及喘息服務，陪伴每一位長者與家庭，讓照顧與生活，在家溫暖實現。</p>
+      <div class="hero-ctas">
+        <a href="tel:0286726009" class="btn btn-primary">📞 立即來電</a>
+        <a href="#services" class="btn btn-pink">📝 立即申請服務</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>10+</b><span>年整合照護經驗</span></div>
+        <div class="stat"><b>三峽・樹林</b><span>主要服務區域</span></div>
+        <div class="stat"><b>土城・鶯歌</b><span>次要服務區域</span></div>
+        <div class="stat"><b>A單位</b><span>長照個案管理資格</span></div>
+      </div>
+    </div>
+    <div class="flower-wrap">
+      <svg class="flower" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="整合照護服務示意圖：以家庭為中心，結合居家護理、長照服務、個案管理、社區照顧與衛教陪伴">
+        <circle cx="210" cy="130" r="86" fill="var(--blue-soft)" opacity="0.55"/>
+        <circle cx="300" cy="210" r="86" fill="var(--pink-soft)" opacity="0.65"/>
+        <circle cx="255" cy="300" r="86" fill="var(--blue-pale)" opacity="0.85"/>
+        <circle cx="150" cy="300" r="86" fill="var(--pink-soft)" opacity="0.55"/>
+        <circle cx="115" cy="200" r="86" fill="var(--blue-soft)" opacity="0.4"/>
+        <circle cx="210" cy="222" r="70" fill="#fff" stroke="var(--blue-deep)" stroke-width="2"/>
+        <text x="210" y="216" text-anchor="middle" class="petal-label" font-size="16" fill="var(--blue-deep)" font-weight="800">大心</text>
+        <text x="210" y="236" text-anchor="middle" class="petal-sub" font-size="11">以家為中心</text>
+
+        <text x="210" y="105" text-anchor="middle" class="petal-label">居家護理</text>
+        <text x="322" y="185" text-anchor="middle" class="petal-label">個案管理</text>
+        <text x="278" y="330" text-anchor="middle" class="petal-label">長照服務</text>
+        <text x="150" y="345" text-anchor="middle" class="petal-label">社區照顧</text>
+        <text x="80" y="165" text-anchor="middle" class="petal-label">衛教陪伴</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="display:inline-flex;">關於我們</div>
+      <h2>專業、溫暖、尊嚴、整合、陪伴</h2>
+      <p>大心居家整合照護團隊成立的初衷，是相信每一位長者都值得在熟悉的家中，獲得完整而有尊嚴的照顧。我們整合居家護理、長照服務與個案管理資源，讓家屬不再徬徨無助。</p>
+    </div>
+    <div class="about-grid">
+      <div class="value-card"><div class="ic">🩺</div><h3>專業</h3><p>領有證照的護理與照服團隊</p></div>
+      <div class="value-card"><div class="ic">🏡</div><h3>溫暖</h3><p>把照護做得像家人一樣</p></div>
+      <div class="value-card"><div class="ic">🤝</div><h3>尊嚴</h3><p>尊重每位長者的生活步調</p></div>
+      <div class="value-card"><div class="ic">🔗</div><h3>整合</h3><p>一站式串接各項照護資源</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:#fff;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="display:inline-flex;">服務項目</div>
+      <h2>四大整合照護服務</h2>
+      <p>依長者與家庭的需求，提供由淺入深、由居家到社區的完整照護資源。</p>
+    </div>
+
+    <div class="svc-tabs">
+      <button class="svc-tab active" data-tab="t1">居家護理服務</button>
+      <button class="svc-tab" data-tab="t2">長照服務</button>
+      <button class="svc-tab" data-tab="t3">個案管理服務</button>
+      <button class="svc-tab" data-tab="t4">巷弄長照站／喘息</button>
+    </div>
+
+    <div class="svc-panel active" id="t1">
+      <div class="svc-provider-note">居家護理服務由 <b>大心居家護理所</b> 提供</div>
+      <div class="svc-grid">
+        <div class="svc-card"><span class="tag">護理</span><h3>傷口照護</h3><p>專業評估與換藥處置，加速癒合並預防感染。</p></div>
+        <div class="svc-card"><span class="tag">護理</span><h3>三管更換</h3><p>鼻胃管、尿管、氣切管定期更換與衛教指導。</p></div>
+        <div class="svc-card"><span class="tag">護理</span><h3>居家抽血</h3><p>免出門即可完成定期檢驗抽血。</p></div>
+        <div class="svc-card"><span class="tag">護理</span><h3>居家安寧</h3><p>陪伴末期病人與家屬，兼顧生理與心理照護。</p></div>
+        <div class="svc-card"><span class="tag">護理</span><h3>在宅急症照護</h3><p>急性病況居家處置，減少往返醫院奔波。</p></div>
+        <div class="svc-card"><span class="tag">護理</span><h3>家屬衛教與看護指導</h3><p>教導家屬與外籍看護正確照護技巧。</p></div>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="t2">
+      <div class="svc-provider-note">長照服務由 <b>新北市私立大心居家長照機構</b> 提供</div>
+      <div class="svc-grid">
+        <div class="svc-card"><span class="tag">長照</span><h3>身體照顧</h3><p>沐浴、翻身拍背、如廁協助等日常照顧。</p></div>
+        <div class="svc-card"><span class="tag">長照</span><h3>陪同就醫／外出</h3><p>專人陪同看診、辦事，安心又放心。</p></div>
+        <div class="svc-card"><span class="tag">長照</span><h3>家務與備餐服務</h3><p>清潔、備餐，維持生活品質。</p></div>
+        <div class="svc-card"><span class="tag">長照</span><h3>復能服務</h3><p>協助恢復生活自理能力，延緩失能。</p></div>
+        <div class="svc-card"><span class="tag">長照</span><h3>足部照顧</h3><p>足部清潔、指甲修剪與皮膚狀況檢查。</p></div>
+        <div class="svc-card"><span class="tag">長照</span><h3>長照 3.0 申請協助</h3><p>協助評估與媒合政府長照資源。</p></div>
+      </div>
+
+      <div class="fee-table-wrap">
+        <h3 class="fee-title">居家照顧服務項目與自付額（BA碼）</h3>
+        <p class="fee-note">依衛生福利部長期照顧給付及支付基準，一般戶自付 16%、中低收入戶自付 5%、低收入戶全額補助（0 元）。實際費用與適用資格，請以所在地長照管理中心核定之照顧計畫為準。</p>
+        <div class="fee-table-scroll">
+          <table class="fee-table">
+            <thead>
+              <tr><th>碼別</th><th>服務內容</th><th>原價（元）</th><th>一般戶自付</th><th>中低收自付</th><th>低收自付</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>BA01</td><td>基本身體清潔</td><td>260</td><td>41</td><td>13</td><td>0</td></tr>
+              <tr><td>BA02</td><td>基本日常照顧</td><td>195</td><td>31</td><td>9</td><td>0</td></tr>
+              <tr><td>BA03</td><td>測量生命徵象</td><td>35</td><td>5</td><td>1</td><td>0</td></tr>
+              <tr><td>BA04</td><td>協助進食或管灌餵食</td><td>130</td><td>20</td><td>6</td><td>0</td></tr>
+              <tr><td>BA05</td><td>餐食照顧</td><td>310</td><td>49</td><td>15</td><td>0</td></tr>
+              <tr><td>BA07</td><td>協助沐浴及洗頭</td><td>325</td><td>52</td><td>16</td><td>0</td></tr>
+              <tr><td>BA10</td><td>翻身拍背</td><td>155</td><td>24</td><td>7</td><td>0</td></tr>
+              <tr><td>BA11</td><td>肢體關節活動</td><td>195</td><td>31</td><td>9</td><td>0</td></tr>
+              <tr><td>BA12</td><td>協助上下樓梯</td><td>130</td><td>20</td><td>6</td><td>0</td></tr>
+              <tr><td>BA13</td><td>陪同外出</td><td>195</td><td>31</td><td>9</td><td>0</td></tr>
+              <tr><td>BA14</td><td>陪同就醫</td><td>685</td><td>109</td><td>34</td><td>0</td></tr>
+              <tr><td>BA15-1</td><td>家務協助（自用）</td><td>195</td><td>31</td><td>9</td><td>0</td></tr>
+              <tr><td>BA15-2</td><td>家務協助（共用）</td><td>195</td><td>112</td><td>101</td><td>97</td></tr>
+              <tr><td>BA16-1</td><td>代購或代領或代送服務（自用）</td><td>130</td><td>20</td><td>6</td><td>0</td></tr>
+              <tr><td>BA16-2</td><td>代購或代領或代送服務（共用）</td><td>130</td><td>75</td><td>68</td><td>65</td></tr>
+              <tr><td>BA17a</td><td>人工氣道管內（非氣管內管）分泌物抽吸</td><td>75</td><td>12</td><td>3</td><td>0</td></tr>
+              <tr><td>BA17b</td><td>口腔內（懸壅垂之前）分泌物抽吸</td><td>65</td><td>10</td><td>3</td><td>0</td></tr>
+              <tr><td>BA17c</td><td>尿管及鼻胃管之清潔與固定</td><td>50</td><td>8</td><td>2</td><td>0</td></tr>
+              <tr><td>BA17d1</td><td>血糖機驗血糖</td><td>50</td><td>8</td><td>2</td><td>0</td></tr>
+              <tr><td>BA17d2</td><td>甘油球通便</td><td>50</td><td>8</td><td>2</td><td>0</td></tr>
+              <tr><td>BA17e</td><td>依指示置入藥盒</td><td>50</td><td>8</td><td>2</td><td>0</td></tr>
+              <tr><td>BA18</td><td>安全看視</td><td>200</td><td>32</td><td>10</td><td>0</td></tr>
+              <tr><td>BA20</td><td>陪伴服務</td><td>175</td><td>28</td><td>8</td><td>0</td></tr>
+              <tr><td>BA22</td><td>巡視服務</td><td>130</td><td>20</td><td>6</td><td>0</td></tr>
+              <tr><td>BA23</td><td>協助洗頭</td><td>200</td><td>32</td><td>10</td><td>0</td></tr>
+              <tr><td>BA24</td><td>協助排泄</td><td>220</td><td>35</td><td>11</td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fee-disclaimer">＊以上金額整理自衛福部公告之給付支付基準，僅供參考；每月可使用之總額度依長照失能等級（第2級至第8級）核定，額度用罄後之服務需全額自費。詳細試算歡迎來電諮詢，個管師將協助您試算實際負擔金額。</p>
+      </div>
+
+      <div class="fee-table-wrap">
+        <h3 class="fee-title">居家服務喘息收費標準（GA碼）</h3>
+        <p class="fee-note">依衛生福利部長期照顧給付及支付基準，一般戶自付 16%、中低收入戶自付 5%、低收入戶全額補助（0 元）。</p>
+        <div class="fee-table-scroll">
+          <table class="fee-table">
+            <thead>
+              <tr><th>碼別</th><th>喘息服務</th><th>給付價格（元）</th><th>一般戶自付</th><th>中低收自付</th><th>低收自付</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>GA09</td><td>居家喘息服務</td><td>770</td><td>123</td><td>38</td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fee-disclaimer">＊金額整理自衛福部公告之給付支付基準，僅供參考；實際費用、額度與資格仍以所在地長照中心核定計畫為準。</p>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="t3">
+      <div class="svc-provider-note">個案管理服務由 <b>新北市私立大心居家長照機構</b> 提供</div>
+      <div class="svc-grid">
+        <div class="svc-card"><span class="tag">個管</span><h3>長照需求評估</h3><p>由專業個管師到府評估實際需求。</p></div>
+        <div class="svc-card"><span class="tag">個管</span><h3>照顧計畫擬定</h3><p>量身打造合適的照護與服務組合。</p></div>
+        <div class="svc-card"><span class="tag">個管</span><h3>資源媒合與整合</h3><p>串接跨專業團隊與社福資源。</p></div>
+        <div class="svc-card"><span class="tag">個管</span><h3>定期家訪追蹤</h3><p>持續關心並調整照顧計畫。</p></div>
+      </div>
+      <div class="fee-table-wrap">
+        <h3 class="fee-title">本月輪派服務單位</h3>
+        <p class="fee-note">個案管理服務依月份輪派合作服務單位，以下為當月負責單位資訊，每月更新。</p>
+        <div class="fee-table-scroll">
+          <table class="fee-table" id="rotation-table">
+            <thead>
+              <tr><th>月份</th><th>輪派服務單位</th><th>聯絡窗口</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2026年7月</td><td>（請填入本月輪派服務單位名稱）</td><td>02-8672-6009</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fee-disclaimer">＊此表格每月由本機構更新輪派之服務單位資訊，如有異動請以最新公告或來電確認為準。</p>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="t4">
+      <div class="svc-provider-note">巷弄長照站／喘息服務由 <b>大心居家護理所</b> 提供</div>
+      <div class="svc-grid">
+        <div class="svc-card"><span class="tag">社區</span><h3>社區照顧關懷</h3><p>就近提供社區據點照顧服務。</p></div>
+        <div class="svc-card"><span class="tag">社區</span><h3>健康促進與延緩失能</h3><p>規劃活動延緩老化與失能速度。</p></div>
+        <div class="svc-card"><span class="tag">社區</span><h3>失智照顧課程</h3><p>專為失智長者設計的團體課程。</p></div>
+        <div class="svc-card"><span class="tag">社區</span><h3>照顧者喘息服務</h3><p>讓主要照顧者也能獲得休息與支持。</p></div>
+      </div>
+
+      <div class="fee-table-wrap">
+        <h3 class="fee-title">「喘息服務」與「短照服務」的給付天數及額度</h3>
+        <p class="fee-note">依長輩的長照等級不同，喘息與短照服務可合併使用的總天數皆為 52 天，但兩者的天數分配與給付總額有所不同。</p>
+        <div class="fee-table-scroll">
+          <table class="fee-table">
+            <thead>
+              <tr><th>長輩身份</th><th>喘息給付額度</th><th>短照給付額度</th><th>總給付額度</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>長照等級 2～6 級</td><td>14 天／32,340 元</td><td>38 天／87,780 元</td><td>52 天／120,120 元</td></tr>
+              <tr><td>長照等級 7～8 級</td><td>21 天／48,510 元</td><td>31 天／71,610 元</td><td>52 天／120,120 元</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="respite-detail">
+          <div class="respite-card">
+            <h4>喘息服務</h4>
+            <p>讓家中主要照顧者適當休息、獲得喘息空間，提升照顧者生活品質。</p>
+            <p class="respite-who"><b>適用對象：</b>符合長照服務對象皆可，無其他條件（聘有外籍看護也可以申請）。</p>
+          </div>
+          <div class="respite-card">
+            <h4>短照服務</h4>
+            <p>當外籍看護休假或因故請假時，給予短期照顧，保障長輩的照顧品質不下降。</p>
+            <p class="respite-who"><b>適用對象：</b>符合長照服務對象，且聘有外籍看護之被照顧者，才可申請。</p>
+          </div>
+        </div>
+        <p class="fee-disclaimer">＊給付天數與額度依長輩經評估之長照等級而定，實際仍請以所在地長照中心核定為準。</p>
+      </div>
+
+      <div class="fee-table-wrap">
+        <h3 class="fee-title">喘息 & 短照，三大類服務方式</h3>
+        <p class="fee-note">依照長輩與家庭的生活型態，喘息與短照可選擇以下三種服務方式。</p>
+        <div class="service-tree">
+          <svg viewBox="0 0 1000 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="長照三大服務類別：住宿式、社區式、居家式，各自對應服務單位與可使用時數">
+            <g stroke="#B9C6CA" stroke-width="2.5" fill="none">
+              <path d="M500,66 L500,90 L145,140"/>
+              <path d="M500,66 L500,90 L500,140"/>
+              <path d="M500,66 L500,90 L855,140"/>
+              <path d="M145,184 L145,250"/>
+              <path d="M500,184 L500,210 L330,210 L330,250"/>
+              <path d="M500,184 L500,210 L500,250"/>
+              <path d="M500,184 L500,210 L670,210 L670,250"/>
+              <path d="M855,184 L855,250"/>
+              <path d="M145,290 L145,318"/>
+              <path d="M330,290 L330,305 L300,305 L300,318"/>
+              <path d="M330,290 L330,305 L362,305 L362,318"/>
+              <path d="M500,290 L500,305 L442,305 L442,318"/>
+              <path d="M500,290 L500,305 L500,318"/>
+              <path d="M500,290 L500,305 L558,305 L558,318"/>
+              <path d="M670,290 L670,318"/>
+              <path d="M855,290 L855,318"/>
+            </g>
+
+            <rect x="385" y="20" width="230" height="46" rx="12" style="fill:var(--blue-deep)"/>
+            <text x="500" y="48" text-anchor="middle" style="fill:#fff;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:17px;">長照三大服務類別</text>
+
+            <rect x="60" y="140" width="170" height="44" rx="10" style="fill:var(--pink-deep)"/>
+            <text x="145" y="168" text-anchor="middle" style="fill:#fff;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:16px;">住宿式</text>
+
+            <rect x="415" y="140" width="170" height="44" rx="10" style="fill:var(--pink-deep)"/>
+            <text x="500" y="168" text-anchor="middle" style="fill:#fff;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:16px;">社區式</text>
+
+            <rect x="770" y="140" width="170" height="44" rx="10" style="fill:var(--pink-deep)"/>
+            <text x="855" y="168" text-anchor="middle" style="fill:#fff;font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:16px;">居家式</text>
+
+            <rect x="72" y="250" width="146" height="40" rx="20" fill="#fff" stroke="var(--blue-deep)" stroke-width="1.5"/>
+            <text x="145" y="275" text-anchor="middle" style="fill:var(--blue-deep);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14.5px;">住宿機構</text>
+
+            <rect x="257" y="250" width="146" height="40" rx="20" fill="#fff" stroke="var(--blue-deep)" stroke-width="1.5"/>
+            <text x="330" y="275" text-anchor="middle" style="fill:var(--blue-deep);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14.5px;">日照中心</text>
+
+            <rect x="418" y="250" width="164" height="40" rx="20" fill="#fff" stroke="var(--blue-deep)" stroke-width="1.5"/>
+            <text x="500" y="275" text-anchor="middle" style="fill:var(--blue-deep);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14.5px;">小規模多機能</text>
+
+            <rect x="597" y="250" width="146" height="40" rx="20" fill="#fff" stroke="var(--blue-deep)" stroke-width="1.5"/>
+            <text x="670" y="275" text-anchor="middle" style="fill:var(--blue-deep);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14.5px;">巷弄長照站</text>
+
+            <rect x="782" y="250" width="146" height="40" rx="20" fill="#fff" stroke="var(--blue-deep)" stroke-width="1.5"/>
+            <text x="855" y="275" text-anchor="middle" style="fill:var(--blue-deep);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:14.5px;">到府服務</text>
+
+            <rect x="95" y="318" width="100" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="145" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;">全天</text>
+            <text x="145" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;">24小時</text>
+
+            <rect x="252" y="318" width="96" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="300" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">半日</text>
+            <text x="300" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">4小時</text>
+
+            <rect x="316" y="318" width="92" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="362" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">全日</text>
+            <text x="362" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">8小時</text>
+
+            <rect x="398" y="318" width="88" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="442" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">半日</text>
+            <text x="442" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">4小時</text>
+
+            <rect x="456" y="318" width="88" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="500" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">全日</text>
+            <text x="500" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">8小時</text>
+
+            <rect x="514" y="318" width="88" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="558" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">一晚</text>
+            <text x="558" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12px;">14小時</text>
+
+            <rect x="620" y="318" width="100" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="670" y="345" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;">每小時</text>
+
+            <rect x="798" y="318" width="114" height="46" rx="8" style="fill:var(--blue-pale)"/>
+            <text x="855" y="336" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;">每日</text>
+            <text x="855" y="353" text-anchor="middle" style="fill:var(--ink);font-family:'Noto Sans TC',sans-serif;font-weight:700;font-size:12.5px;">2–10小時</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="display:inline-flex;">申請流程</div>
+      <h2>五步驟，安心開始照護</h2>
+      <p>從第一通電話到服務開始，我們陪您一步步完成。</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>來電諮詢</h4><p>說明長者狀況與需求</p></div>
+      <div class="step"><div class="num">2</div><h4>到府評估</h4><p>專業人員實地了解需求</p></div>
+      <div class="step"><div class="num">3</div><h4>擬定照顧計畫</h4><p>量身規劃服務內容</p></div>
+      <div class="step"><div class="num">4</div><h4>資源媒合申請</h4><p>協助長照 3.0 相關申請</p></div>
+      <div class="step"><div class="num">5</div><h4>開始服務</h4><p>定期追蹤並適時調整</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="display:inline-flex;">家屬心聲</div>
+      <h2>來自家屬的真實回饋</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>「照服員很有耐心，媽媽現在願意配合復健，看到她笑容變多，我們全家都安心不少。」</p>
+        <div class="testi-who"><div class="av"></div>王小姐・照顧失能母親</div>
+      </div>
+      <div class="testi-card">
+        <p>「個案管理師幫我們把長照申請流程講得很清楚，省下很多摸索的時間。」</p>
+        <div class="testi-who"><div class="av"></div>陳先生・照顧失智父親</div>
+      </div>
+      <div class="testi-card">
+        <p>「喘息服務讓我終於能好好休息幾天，回來又有力氣繼續照顧爸爸了。」</p>
+        <div class="testi-who"><div class="av"></div>林小姐・主要照顧者</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="display:inline-flex;">常見問題</div>
+      <h2>大家最常問的問題</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q">居家護理如何申請？<span class="plus">+</span></button>
+        <div class="faq-a">
+          <p>民眾若有「全民健保居家護理」需求（如需更換管路、傷口換藥等），請先至醫院、診所請醫師開立「居家照護醫囑單」與「轉介單」，再依下列方式申請：</p>
+          <p>・<b>電話直撥</b>：手機或市話直撥 1966 長照專線，由專員協助轉介。<br>
+          ・<b>親洽辦理</b>：親自前往各地區公所、衛生所或長期照顧管理中心辦理。<br>
+          ・<b>線上申請</b>：請於服務時間來電諮詢，或留下聯絡訊息，我們會盡快與您聯繫。</p>
+          <p style="font-size:13px;color:var(--ink-muted);">服務時間：週一至週五 08:00–17:00（中午休息 1 小時，例假日休息）</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">長照 3.0 如何申請？<span class="plus">+</span></button>
+        <div class="faq-a">
+          <p>申請長照 3.0 共有以下 5 大步驟：</p>
+          <p>
+          <b>1. 撥打長照專線：</b>手機或市話直撥 1966（前5分鐘通話免費），告知專員受照顧者的基本資料與照顧需求。<br><br>
+          <b>2. 到府評估：</b>政府照管專員會與家屬約定時間，親自到家中評估長輩或失能者的日常生活自理能力（如穿衣、進食、洗澡等）。<br><br>
+          <b>3. 核定等級與額度：</b>評估後會核發長照需要等級（分為2至8級），並依據等級與家庭經濟狀況（一般戶、中低收入戶、低收入戶）給予對應的補助額度。<br><br>
+          <b>4. 擬定照顧計畫：</b>個案管理師會與家屬討論，根據核定額度安排最適合的長照服務（例如：居家服務、復能服務、日間照顧、輔具購買或租賃等）。<br><br>
+          <b>5. 啟動服務：</b>特約長照單位開始提供服務，家屬只需繳納規定的自負額（一般戶為16%）。
+          </p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">服務費用是多少？<span class="plus">+</span></button>
+        <div class="faq-a"><p>費用依服務項目與長照補助資格而異，歡迎來電，我們會提供詳細試算。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">哪些人可以申請服務？<span class="plus">+</span></button>
+        <div class="faq-a"><p>凡有居家護理、長期照顧或喘息需求之長者與家庭，皆可與我們聯繫評估。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">多久可以開始服務？<span class="plus">+</span></button>
+        <div class="faq-a"><p>一般評估完成後，最快可於數日內安排服務開始，實際時間依個案狀況調整。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#fff;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="display:inline-flex;">聯絡我們</div>
+      <h2>讓我們陪您一起，照顧最重要的家人</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-row"><div class="ic">📞</div><div><b>服務專線</b><span>02-8672-6009（服務時間：週一至週五 08:00–17:00，中午休息 1 小時，例假日休息）</span></div></div>
+        <div class="contact-row"><div class="ic">🗺️</div><div><b>服務區域</b><span>主要服務區：三峽、樹林｜次要服務區：土城、鶯歌</span></div></div>
+        <div class="contact-row"><div class="ic">📍</div><div><b>總部地址</b><span>新北市樹林區大義路238號</span></div></div>
+        <div class="contact-row"><div class="ic">📍</div><div><b>三峽長照辦公處</b><span>新北市三峽區學成路327號2樓之1</span></div></div>
+        <div class="contact-row"><div class="ic">✉️</div><div><b>Email</b><span>dasin.homcare@gmail.com</span></div></div>
+        <div class="contact-row"><div class="ic">👍</div><div><b>Facebook 粉絲專頁</b><span>大心居家護理所｜<a href="https://www.facebook.com/bigheart.nurse" target="_blank" rel="noopener" style="color:var(--blue-deep);font-weight:700;">前往粉專</a></span></div></div>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="tel:0286726009" class="btn btn-primary">📞 立即來電</a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <div class="map-tabs">
+          <button class="map-tab active" data-map="mapA">總部｜樹林</button>
+          <button class="map-tab" data-map="mapB">三峽長照辦公處</button>
+        </div>
+        <div class="map-box active" id="mapA">
+          <iframe
+            src="https://www.google.com/maps?q=%E5%A4%A7%E5%BF%83%E5%B1%85%E5%AE%B6%E8%AD%B7%E7%90%86%E6%89%80,%E6%96%B0%E5%8C%97%E5%B8%82%E6%A8%B9%E6%9E%97%E5%8D%80%E5%A4%A7%E7%BE%A9%E8%B7%AF238%E8%99%9F&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="總部地圖：大心居家護理所，新北市樹林區大義路238號"></iframe>
+        </div>
+        <div class="map-box" id="mapB">
+          <iframe
+            src="https://www.google.com/maps?q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E5%B3%BD%E5%8D%80%E5%AD%B8%E6%88%90%E8%B7%AF327%E8%99%9F&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="三峽長照辦公處地圖：新北市三峽區學成路327號2樓之1"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>大心居家整合照護團隊</h4>
+        <p style="color:#AAB8BC;font-size:13px;">讓照顧與生活，在家溫暖實現。</p>
+        <p style="color:#AAB8BC;font-size:12.5px;margin-top:10px;">總部｜新北市樹林區大義路238號</p>
+        <p style="color:#AAB8BC;font-size:12.5px;">三峽長照辦公處｜新北市三峽區學成路327號2樓之1</p>
+      </div>
+      <div>
+        <h4>服務項目</h4>
+        <ul><li><a href="#services">居家護理</a></li><li><a href="#services">長照服務</a></li><li><a href="#services">個案管理</a></li><li><a href="#services">社區照顧</a></li></ul>
+      </div>
+      <div>
+        <h4>關於</h4>
+        <ul><li><a href="#about">關於我們</a></li><li><a href="#process">申請流程</a></li><li><a href="#faq">常見問題</a></li></ul>
+      </div>
+      <div>
+        <h4>聯絡方式</h4>
+        <ul><li><a href="tel:0286726009">02-8672-6009</a></li><li><a href="https://www.facebook.com/bigheart.nurse" target="_blank" rel="noopener">Facebook</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 大心居家整合照護團隊 All Rights Reserved.</span>
+      <span><a href="#">隱私權政策</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab-group">
+  <a href="mailto:dasin.homcare@gmail.com" class="fab fab-phone" aria-label="寄送 Email">✉️</a>
+</div>
+
+<script>
+  // Service tabs
+  document.querySelectorAll('.svc-tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      document.querySelectorAll('.svc-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Map tabs
+  document.querySelectorAll('.map-tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      document.querySelectorAll('.map-tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.map-box').forEach(m=>m.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.map).classList.add('active');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
