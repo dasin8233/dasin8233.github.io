@@ -1,38 +1,79 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasin 的個人網站</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🎉 恭喜！我的第一個免費網站上線了！</h1>
-        <p>這是用 GitHub Pages 建立的專屬網站。</p>
-    </div>
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大心居家整合照護團隊｜居家護理・長照服務・個案管理</title>
+<meta name="description" content="提供居家護理、長照3.0、個案管理、喘息服務、失智照護、在宅急症、居家安寧等整合照護服務，守護每一個家庭。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBFAF7;
+    --blue-pale:#EAF3F7;
+    --blue-soft:#9BC6DC;
+    --blue-deep:#4C7E96;
+    --pink-soft:#F6D2D9;
+    --pink-deep:#D98A9B;
+    --ink:#2E3A3F;
+    --ink-muted:#657177;
+    --line-c:#DCE6E9;
+    --radius-lg:28px;
+    --radius-md:18px;
+    --radius-sm:12px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Sans TC', sans-serif;
+    font-size:17px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Noto Serif TC', serif;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  /* focus visibility */
+  a:focus-visible, button:focus-visible{outline:3px solid var(--blue-deep); outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,250,247,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line-c);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px; max-width:1120px; margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;}
+  .brand-mark{
+    width:38px;height:38px;border-radius:50%;
+    background:conic-gradient(from 200deg, var(--blue-soft), var(--pink-soft), var(--blue-soft));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif TC',serif; font-weight:700; color:var(--blue-deep); font-size:15px;
+  }
+  nav.links{display:flex;gap:28px;font-size:15px;font-weight:500;color:var(--ink-muted);}
+  nav.links a:hover{color:var(--blue-deep);}
+  .nav-cta{display:flex;gap:10px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:11px 22px;border-radius:999px;font-weight:700;font-size:15px;
+    border:2px solid transparent; cursor:pointer; white-space:nowrap;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--blue-deep);color:#fff;box-shadow:0 6px 16px rgba(76,126,150,.28);}
+  .btn-pink{background:var(--pink-deep);color:#fff;box-shadow:0 6px 16px rgba(217,138,155,.30);}
+  .btn-ghost{background:#fff;color:var(--blue-deep);border-color:var(--blue-soft);}
+  .btn-sm{padding:8px 16px;font-size:14px;}
+  @media (max-width:860px){ nav.links{display:
